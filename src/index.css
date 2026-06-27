@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-climax-dark text-white antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(ellipse at top, #2A0000 0%, #1A0000 60%, #0D0000 100%);
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1A0000;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-climax-dark-border rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-climax-gold hover:bg-climax-gold-light text-climax-dark font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-climax-dark-card border border-climax-dark-border rounded-xl p-6;
+    background: rgba(34, 0, 0, 0.85);
+  }
+
+  .gold-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-climax-gold to-transparent opacity-40 my-6;
+  }
+
+  .tab-active {
+    @apply border-b-2 border-climax-gold text-climax-gold;
+  }
+  .tab-inactive {
+    @apply border-b-2 border-transparent text-gray-400 hover:text-white;
+  }
+}
+
+/* Shimmer gradient for logo */
+.logo-shimmer {
+  background: linear-gradient(
+    90deg,
+    #C9A84C 0%,
+    #F5E27A 40%,
+    #C9A84C 60%,
+    #8B6914 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
