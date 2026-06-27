@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: { port: 5173 },
-  preview: { port: process.env.PORT ? parseInt(process.env.PORT) : 3000, host: true },
+  preview: { port: 3000, host: true },
   optimizeDeps: {
     exclude: ['pdfjs-dist']
   },
